@@ -24,16 +24,25 @@ For other options on installation see [Installing AutoRest](https://aka.ms/autor
 
 These are the global settings for the communicationservices.
 
-```yaml
+``` yaml
 openapi-type: data-plane
-tag: package-2020-07-20-preview1
+tag: package-preview-2021-10
 ```
 
+
+### Tag: package-preview-2021-10
+
+These settings apply only when `--tag=package-preview-2021-10` is specified on the command line.
+
+```yaml $(tag) == 'package-preview-2021-10'
+input-file:
+  - preview/2021-10-25-preview.1/phonenumbers.json
+```
 ### Tag: package-phonenumber-2021-03-07
 
 These settings apply only when `--tag=package-phonenumber-2021-03-07` is specified on the command line.
 
-```yaml $(tag) == 'package-phonenumber-2021-03-07'
+``` yaml $(tag) == 'package-phonenumber-2021-03-07'
 input-file:
   - stable/2021-03-07/phonenumbers.json
 title:
@@ -41,6 +50,7 @@ title:
 ```
 
 ## Supression
+
 ``` yaml
 directive:
   - from:
